@@ -1,0 +1,35 @@
+[
+    {
+        "_class": "com.billingengine.contractledger.TestMParent",
+        "id": 1,
+        "accountName": "Test account",
+        "contracts":[{
+        	"_class": "com.billingengine.contractledger.TestM",
+        	"id": 1,
+        	"accountId": 1,
+        	"name": "apple",
+        	"color": "red",
+        	"children": [{
+	        	"_class": "com.billingengine.contractledger.TestMChild",
+	        	"id": 1,
+	        	"contractLineName": "name 1",
+	        	"contractLineTerm": 50,
+	        	"contractId": 1
+	        },
+	        {
+	        	"_class": "com.billingengine.contractledger.TestMChild",
+	        	"id": 2,
+	        	"contractLineName": "name 2",
+	        	"contractLineTerm": 500,
+	        	"contractId": 1
+	        }]
+        },
+        {
+	        "_class": "com.billingengine.contractledger.TestM",
+	        "id": 2,
+	        "accountId": 1,
+	        "name": "guava",
+	        "color": "green"
+		}]
+    }
+]
