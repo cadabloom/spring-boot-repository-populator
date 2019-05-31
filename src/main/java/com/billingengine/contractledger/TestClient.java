@@ -11,6 +11,10 @@ public class TestClient {
 	  public void run() {
 	      System.out.println(" -- finding all employees --");
 	      Iterable<TestMParent> all = repo.findAll();
-	      all.forEach(System.out::println);
+	      all.forEach(item -> {
+	    	  System.out.println("Account: " + item.getAccountName() + ";" +
+	    			  			 "Contract: " + item.getContracts().get(0).getName()
+	    			  			 );
+	      });
 	  }
 }
