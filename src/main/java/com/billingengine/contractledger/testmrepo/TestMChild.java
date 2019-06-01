@@ -1,4 +1,4 @@
-package com.billingengine.contractledger;
+package com.billingengine.contractledger.testmrepo;
 
 import javax.persistence.Entity;
 import javax.persistence.ForeignKey;

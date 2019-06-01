@@ -10,6 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.billingengine.contractledger.contractrepo.ContractRepository;
+import com.billingengine.contractledger.testmrepo.TestMParent;
+import com.billingengine.contractledger.testmrepo.TestMRepository;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class BillingengineContractledgerServiceApplicationTests {
@@ -21,20 +25,23 @@ public class BillingengineContractledgerServiceApplicationTests {
 	 @Autowired
     private TestMRepository fruitRepository;
 
+	 @Autowired
+	 private ContractRepository contractRepository;
+	 
 	    @Test
 	    public void givenFruitJsonPopulatorThenShouldInsertRecordOnStart() {
 
 	        List<TestMParent> fruits = fruitRepository.findAll();
 	        assertEquals("record count is not matching", 2, fruits.get(0).getContracts().size());
-
-//	        fruits.forEach(fruit -> {
-//	            if (1 == fruit.getId()) {
-//	                assertEquals("apple", fruit.getName());
-//	                assertEquals("red", fruit.getColor());
-//	            } else if (2 == fruit.getId()) {
-//	                assertEquals("guava", fruit.getName());
-//	                assertEquals("green", fruit.getColor());
-//	            }
-//	        });
+	        
+	        //com.billingengine.contractledger.contractrepo.Test s = new com.billingengine.contractledger.contractrepo.Test();
+	        //s.setName("test success");
+	        //contractRepository.save(s);
+	        
+	        List<com.billingengine.contractledger.contractrepo.Test> testrecords = contractRepository.findAll();
+	        assertEquals("record count is not matching", 1, testrecords.size());
+	        
 	    }
+	    
+	    
 }

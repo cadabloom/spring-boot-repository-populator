@@ -3,6 +3,9 @@ package com.billingengine.contractledger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.billingengine.contractledger.testmrepo.TestMParent;
+import com.billingengine.contractledger.testmrepo.TestMRepository;
+
 @Component
 public class TestClient {
 	@Autowired
